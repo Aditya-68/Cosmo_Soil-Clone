@@ -1,0 +1,83 @@
+/* FilterBar Container Styles */
+.filter-bar-container {
+    background: #f8f8f8;
+    border: 2px solid rgba(172, 132, 71, 0.886);
+    border-radius: 5px;
+    padding: 0.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Filter Control Group Styles */
+  .filter-control-group {
+    width: 269px;
+    border: 3px solid rgba(172, 132, 71, 0.886);
+    border-radius: 4px;
+    padding: 0.75rem;
+    background-color: white;
+  }
+  
+  /* Select Input Styles */
+  .filter-select {
+    border: 2px solid rgba(237, 234, 229, 0.886) !important;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #495057;
+    cursor: pointer;
+    background-color: white !important; /* Force white background */
+    appearance: none; /* Remove default system styling */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+  }
+  
+  /* Dropdown arrow styling */
+  .filter-select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236c757d'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1.5rem;
+  }
+  
+  .filter-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+    outline: none;
+  }
+  
+  /* Dropdown options styling */
+  .filter-select option {
+    background-color: white;
+    color: #495057;
+    padding: 0.5rem;
+  }
+  
+  /* Responsive adjustments remain the same */
+  @media (max-width: 1200px) {
+    .filter-control-group {
+      width: 220px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .filter-control-group {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .filter-control-group {
+      width: 100%;
+    }
+    
+    .filter-bar-container {
+      gap: 0.75rem;
+      padding: 0.75rem;
+    }
+  }

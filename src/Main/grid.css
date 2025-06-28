@@ -1,0 +1,63 @@
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    gap: 10px;
+    background-color: #e9e9e9;
+    box-sizing: border-box;
+    position: relative; /* Added for precise width calculation */
+}
+
+.filter-section {
+    grid-column: 1 / span 2; /* Span first two columns only */
+    grid-row: 1;
+    background-color: #f8f8f8;
+    border: 1.5px solid rgba(172, 132, 71, 0.886);
+    display: flex;
+    justify-content: center;
+    width: calc(100% + 10px); /* Compensate for grid gap */
+    margin-left: -10px; /* Align with grid start */
+    box-sizing: border-box;
+    margin-left: 0.1px;
+}
+
+.filter-section > div {
+    width: 100%;
+    max-width: calc(100% - 4px); /* Account for border width */
+}
+
+.map-section {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: white;
+    border: 2px solid rgba(172, 132, 71, 0.886);
+}
+
+.list-section {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: white;
+    border: 2px solid rgba(172, 132, 71, 0.886);
+    overflow-y: auto;
+}
+
+.card-section {
+    grid-column: 3;
+    grid-row: 1 / span 2; /* Span both rows */
+    background-color: white;
+    border: 2px solid rgba(172, 132, 71, 0.886);
+    overflow-y: auto;
+    display: flex;              /* 👈 key change */
+    flex-direction: column;     /* vertical stacking */
+    justify-content: stretch;   /* stretch items */
+    align-items: stretch;       /* stretch horizontally too */
+}
+
+/* Remove padding from all sections */
+.filter-section,
+.map-section,
+.list-section,
+.card-section {
+    padding: 0;
+}

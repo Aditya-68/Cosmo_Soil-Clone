@@ -1,0 +1,30 @@
+.property-container {
+    max-height: 610px; /* Adjust as needed */
+    overflow-y: auto; /* Only this should have scroll */
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid #ebebeb; /* Updated border color */
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: rgb(166, 124, 82); /* Updated header background color */
+    color: white; /* Improve contrast */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Remove tbody scroll and ensure table expands fully */
+tbody {
+    display: table-row-group;
+}
